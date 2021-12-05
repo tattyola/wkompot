@@ -18,6 +18,7 @@ jobs:
           name: Run tests
           command: |
             npm run test:chrome:headless
+
 workflows:
   commit:
     jobs:
