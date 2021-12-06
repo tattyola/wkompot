@@ -5,7 +5,7 @@ config();
 
 exports.config = {
     specs: [
-        './specs/**/client.spec.js'
+        './specs/**/*.spec.js'
     ],
     exclude: [
     ],
@@ -18,7 +18,9 @@ exports.config = {
     connectionRetryCount: 1,
 
     services: ['devtools', 'geckodriver'],
-    reporters: ['spec'],
+    reporters: ['spec', ['allure', {
+        disableWebdriverStepsReporting: true
+    }]],
     framework: 'mocha',
     mochaOpts: {
         ui: 'bdd',
