@@ -24,7 +24,7 @@ describe('Client', function () {
         await expect(ClientsPage.getItemByEmail(email)).toBeDisplayed()
     })
 
-    it.skip('deletion', async function() {
+    it('deletion', async function() {
         await ClientsPage.deleteClient(email);
         await expect(ClientsPage.getItemByEmail(email)).not.toBeExisting();
     })
